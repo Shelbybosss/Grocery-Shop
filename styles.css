@@ -52,52 +52,100 @@ body{
     color: black;
 }
 
-.hero{
+.navbar-right ul a:hover{
+  color: #634cfe;
+}
+
+.hero {
+    position: relative;
     margin-top: 0;
-    background-color: #D5E9F4;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px   ;
+    gap: 30px;
+    overflow: hidden;
+    background-color: transparent; /* Remove background color */
+    margin-bottom: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_your_video_poster.jpg') no-repeat center center/cover; /* Optional fallback */
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    margin-bottom: 0;
     
 }
 
-.hero-left{
-   margin-left: 22%;
+.hero-left {
+    position: relative;
+    margin-left: 0%;
+    z-index: 1;
+    margin-bottom: 10%;
+    margin-right: 25%;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border-color: black;
+    border: solid;
+    
+
 }
 
-.hero-left h1{
-    font-family: "Calligraffitti", cursive;
+.hero-left h1 {
+    font-family: "Kantas", cursive;
     font-weight: 1600;
     font-style: bolder;
-    font-size: 48px; /* Adjust the size as needed */
-  
+    font-size: 60px;
+    color: #000000f4;
 }
 
-.hero-left button{
+.hero-left p{
+    color: #fff;
+}
+
+
+.hero-left button {
     border-radius: 20px;
     padding: 15px;
     background-color: rgb(243, 56, 143);
     color: white;
 }
 
-.hero-left button:hover{
+.hero-left button:hover {
     cursor: pointer;
     background-color: brown;
     transition: 0.5s ease;
 }
 
-.hero-right{
+.hero-right {
+    position: relative;
     margin-right: 10%;
+    z-index: 1;
 }
 
-.hero-right img{
+.hero-right img {
     height: 70%;
     width: 70%;
-    
 }
 
 
@@ -493,4 +541,150 @@ body{
 .food-price {
     font-size: 16px;
     color: #fff;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+  .navbar-left, .navbar-right {
+      width: 100%;
+      justify-content: center;
+  }
+  .hero {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+  }
+  .hero-left, .hero-right {
+      margin: 0;
+      width: 100%;
+  }
+  .hero-left h1 {
+      font-size: 32px;
+  }
+  .aboutfood-left img, .hero-right img {
+      width: 80%;
+  }
+  .client-reviews {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+  .client-reviews-left, .client-reviews-right {
+      margin: 0;
+      width: 90%;
+  }
+  .email {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+  .footer-row {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+  .navbar-left, .navbar-right {
+      width: 100%;
+      justify-content: center;
+  }
+  .hero {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+  }
+  .hero-left, .hero-right {
+      margin: 0;
+      width: 100%;
+  }
+  .hero-left h1 {
+      font-size: 36px;
+  }
+  .aboutfood-left img, .hero-right img {
+      width: 70%;
+  }
+  .client-reviews {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+  .client-reviews-left, .client-reviews-right {
+      margin: 0;
+      width: 90%;
+  }
+  .email {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+  .footer-row {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+
+.herosecond{
+    padding: 0;
+    margin-top: 0;
+    background-color: #D5E9F4;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px   ;
+    
+}
+
+.hero-second-left{
+   margin-left: 22%;
+   
+}
+
+.hero-second-left h1{
+    font-family: "Calligraffitti", cursive;
+    font-weight: 1600;
+    font-style: bolder;
+    font-size: 48px; /* Adjust the size as needed */
+  
+}
+
+.hero-second-left button{
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgb(243, 56, 143);
+    color: white;
+}
+
+.hero-second-left button:hover{
+    cursor: pointer;
+    background-color: brown;
+    transition: 0.5s ease;
+}
+
+.hero-second-right{
+    margin-right: 10%;
+    
+}
+
+.hero-second-right img{
+    height: 70%;
+    width: 70%;
+    
 }

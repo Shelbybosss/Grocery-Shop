@@ -1,0 +1,103 @@
+body{
+  font-family: "Timmana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0  ;
+  padding: 0;
+}
+
+.navbar{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-color: rgba(242, 229, 224, 0.466);
+margin-bottom: 0;
+
+
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-left{
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 30%;
+gap: 15px;
+
+}
+
+
+
+.navbar-left img{
+height: 50px;
+width: 50px;
+margin-bottom: 5%;
+}
+
+.navbar-right{
+align-items: center;
+}
+
+.navbar-right ul{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+list-style: none;
+gap: 20px    ;
+align-items: center;
+margin-top: 10%;
+}
+
+.navbar-right ul a{
+text-decoration: none;
+color: black;
+}
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per line */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .product-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #634cfe; /* Price color */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .product-item {
+      flex: 1 1 calc(50% - 20px); /* 2 items per line on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-item {
+      flex: 1 1 100%; /* 1 item per line on very small screens */
+    }
+  }
